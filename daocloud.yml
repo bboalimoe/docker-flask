@@ -6,5 +6,4 @@ script:
   - mkdir -p daocloud/testresults
   - mkdir -p daocloud/codecoverage
   - nosetests ./flask_app/test.py --with-xunit --xunit-file=daocloud/testresults/nosetests.xml
-  - which python && coverage run --branch test.py
-  - which python && coverage xml -o daocloud/codecoverage/coverage.xml test.py
+
