@@ -1,0 +1,10 @@
+image: daocloud/ci-python:2.7
+
+
+script:
+  - pip install -r ./flask_app/requirements.txt
+  - mkdir -p daocloud/testresults
+  - mkdir -p daocloud/codecoverage
+  - nosetests ./flask_app/test.py --with-xunit --xunit-file=daocloud/testresults/nosetests.xml
+  - which python && coverage run --branch test.py
+  - which python && coverage xml -o daocloud/codecoverage/coverage.xml test.py
