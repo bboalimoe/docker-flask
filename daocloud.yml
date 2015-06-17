@@ -5,6 +5,13 @@ image: daocloud/ci-python:2.7
 
 
 
+
+
+
+
+
+
+
 script:
   - pip install -r ./flask_app/requirements.txt
   - mkdir -p daocloud/testresults
